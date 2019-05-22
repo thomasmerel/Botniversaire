@@ -11,6 +11,7 @@ const Add = require('./commands/add');
 const Delete = require('./commands/delete');
 const List = require('./commands/list');
 const Default = require('./commands/setDefault');
+const Sources = require('./commands/sources');
 
 let prefix = process.env.PREFIX;
 
@@ -30,6 +31,7 @@ bot.on('message', function (message) {
             Delete.parse(message) ||
             List.parse(message) ||
             Default.parse(message) ||
+            Sources.parse(message) ||
             Help.parse(message);
     }
 });

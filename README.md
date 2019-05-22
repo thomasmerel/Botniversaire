@@ -13,6 +13,7 @@ $ node index.js
 | --list | Affiche la liste des anniversaires |
 | --delete | Supprime la date lié a son pseudo |
 | --setDefault | Defini le channel où seront souhaité les anniversaires (Admin only) |
+| --source | Donne un lien vers les sources du bot |
 | --ping | Pong. |
 
 # Licence
