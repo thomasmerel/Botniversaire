@@ -1,0 +1,60 @@
+const Command = require('./command');
+
+module.exports = class Add extends Command {
+    static match(message) {
+        return message.content.startsWith(process.env.PREFIX + 'setDefault');
+    }
+
+    static action(message) {
+        let author = message.author;
+        let member = message.member;
+        let perm = member.permissions.toArray();
+        let indAdm = perm.indexOf("ADMINISTRATOR");
+
+        if (indAdm === -1) {
+            message.channel.send('Hey dit donc ' + author + ' ! Tu te crois tout permis ?!! :rage:');
+            return false;
+        }
+
+        let server = message.guild;
+
+        let path = './anniversaries';
+        let file = path + '/' + server.id + '.json';
+
+        let fs = require('fs');
+
+        let obj = {};
+
+        fs.exists(file, function (exists) {
+            if (exists) {
+                fs.readFile(file, function readFileCallback(err, data) {
+                    if (err) {
+                        console.log(err);
+                    } else {
+                        obj = JSON.parse(data);
+
+                        if (obj.hasOwnProperty("default") === false) {
+                            obj.default = new Object();
+                        }
+
+                        obj.default['channel'] = message.channel.id;
+
+                        let json = JSON.stringify(obj);
+                        fs.writeFileSync(file, json);
+
+                        message.channel.send('Le channel par default a bien été mis a jours. :clap:');
+                    }
+                });
+            } else {
+                obj.default = new Object();
+
+                obj.default['channel'] = message.channel.id;
+
+                let json = JSON.stringify(obj);
+                fs.writeFileSync(file, json);
+
+                message.channel.send('Le channel par default a bien été mis a jours. :clap:');
+            }
+        });
+    }
+};
