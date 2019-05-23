@@ -9,7 +9,7 @@ const Ping = require('./commands/ping');
 const Help = require('./commands/help');
 const Add = require('./commands/add');
 const Delete = require('./commands/delete');
-const List = require('./commands/list');
+// const List = require('./commands/list');
 const Default = require('./commands/setDefault');
 const Sources = require('./commands/sources');
 
@@ -20,7 +20,7 @@ bot.on('ready', function () {
 });
 
 bot.on('message', function (message) {
-    if(message.author.bot){
+    if (message.author.bot) {
         return false;
     }
 
@@ -29,12 +29,14 @@ bot.on('message', function (message) {
             Ping.parse(message) ||
             Add.parse(message) ||
             Delete.parse(message) ||
-            List.parse(message) ||
+            // List.parse(message) ||
             Default.parse(message) ||
             Sources.parse(message) ||
             Help.parse(message);
     }
 });
+
+bot.on('error', console.error);
 
 new CronJob('0 0 7 * * *', function () {
 
@@ -71,7 +73,11 @@ new CronJob('0 0 7 * * *', function () {
                                 let defaultChan = guild.channels.find(val => val.id === obj.default['channel']);
                                 let user = guild.members.find(val => val.id === key);
 
-                                defaultChan.send("Bon anniversaire à "+user+" qui fête ses " + age + " aujourd'hui !")
+                                defaultChan.send(
+                                    ":tada: :gift: Joyeux anniversaire à " +user + " ! C'est ses " + age +
+                                    " ans aujourd'hui ! :gift: :tada:",
+                                    {files: ["https://media.giphy.com/media/3oKIPidnxHJQ3SuwwM/giphy.gif"]}
+                                    );
                             }
                         }
                     }

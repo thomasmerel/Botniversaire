@@ -8,12 +8,12 @@ $ node index.js
 # Commands
 | Command | Action |
 | ------ | ------ |
-| --help | Affiche l'aide |
-| --add [AAAA-MM-JJ] | Ajouter son anniversaire |
-| --list | Affiche la liste des anniversaires |
-| --delete | Supprime la date lié a son pseudo |
-| --setDefault | Defini le channel où seront souhaité les anniversaires (Admin only) |
-| --source | Donne un lien vers les sources du bot |
+| --help | Show help |
+| --add [AAAA-MM-JJ] | Add birthday |
+| --list | Show server's birthday list (Admin only) - Not finished|
+| --delete | Delete user's birthday |
+| --setDefault | Set default channel where birthday are wished (Admin only) |
+| --source | Give bot's Github |
 | --ping | Pong. |
 
 # Licence
