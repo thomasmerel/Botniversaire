@@ -29,7 +29,7 @@ This project is on Beer-Ware licence :
 
 # ToDo
 
-- "list" command : Command to show all the server's anniversaries.
+- "list" command : Show server's birthday list.
 - Log file : Record all the actions done by the bot.
 
 # Links
