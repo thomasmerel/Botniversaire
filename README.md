@@ -1,9 +1,19 @@
 # Botniversaire
 
+Install the bot :
+```sh
+$ npm install
+```
+
 Launch the bot :
 ```sh
 $ node index.js
 ```
+
+Dependencies :
+- [Discord.js](https://www.npmjs.com/package/discord)
+- [Cron](https://www.npmjs.com/package/cron)
+- [Dotenv](https://www.npmjs.com/package/dotenv)
 
 # Commands
 | Command | Action |
@@ -16,6 +26,15 @@ $ node index.js
 | --source | Give bot's Github |
 | --ping | Pong. |
 
+# ToDo
+
+- "list" command : Show server's birthday list.
+- Log file : Record all the actions done by the bot.
+
+# Invite this bot to your server
+
+[Invite](https://discordapp.com/api/oauth2/authorize?client_id=579998659161227285&scope=bot&permissions=518145)
+
 # Licence
 
 This project is on Beer-Ware licence :
@@ -26,15 +45,6 @@ This project is on Beer-Ware licence :
 >  and you think this stuff is worth it, you can buy me a beer in return.
 >
 >  Poul-Henning Kamp
-
-# ToDo
-
-- "list" command : Show server's birthday list.
-- Log file : Record all the actions done by the bot.
-
-# Invite this bot to your server
-
-[Invite](https://discordapp.com/api/oauth2/authorize?client_id=579998659161227285&scope=bot&permissions=518145)
 
 # Links
 
