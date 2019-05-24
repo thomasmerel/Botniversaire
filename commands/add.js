@@ -15,7 +15,7 @@ module.exports = class Add extends Command {
 
         if (args[1].match(dateReg) === null) {
             message.reply("Date non-valide... Tu ne sais plus écrire une date ? :face_palm:" + '\n' +
-                "Pour rappelle, le format c'est : `AAAA/MM/JJ`")
+                "Pour rappel, le format c'est : `AAAA/MM/JJ`")
                 .then(sent => console.log(`invalid date by ` + bPerson.username))
                 .catch(console.error);
 
