@@ -1,4 +1,4 @@
-require('dotenv').config({path: `.env`});
+require('dotenv').config({path: `./.env`});
 
 const Discord = require('discord.js');
 const CronJob = require('cron').CronJob;
