@@ -17,6 +17,7 @@ let prefix = process.env.PREFIX;
 
 bot.on('ready', function () {
     bot.user.setActivity('--help').catch(console.error)
+    wish();
 });
 
 bot.on('message', function (message) {
@@ -39,7 +40,10 @@ bot.on('message', function (message) {
 bot.on('error', console.error);
 
 new CronJob('0 0 7 * * *', function () {
+    wish();
+}, null, true, 'Europe/Paris');
 
+function wish(){
     let allguild = bot.guilds.array();
 
     allguild.forEach(function (guild) {
@@ -73,11 +77,14 @@ new CronJob('0 0 7 * * *', function () {
                                 let defaultChan = guild.channels.find(val => val.id === obj.default['channel']);
                                 let user = guild.members.find(val => val.id === key);
 
-                                defaultChan.send(
-                                    ":tada: :gift: Joyeux anniversaire à " +user + " ! C'est ses " + age +
-                                    " ans aujourd'hui ! :gift: :tada:",
-                                    {files: ["https://media.giphy.com/media/3oKIPidnxHJQ3SuwwM/giphy.gif"]}
-                                    );
+                                console.log(new Date());
+                                console.log(user.username);
+
+                                // defaultChan.send(
+                                //     ":tada: :gift: Joyeux anniversaire à " +user + " ! C'est ses " + age +
+                                //     " ans aujourd'hui ! :gift: :tada:",
+                                //     {files: ["https://media.giphy.com/media/3oKIPidnxHJQ3SuwwM/giphy.gif"]}
+                                //     );
                             }
                         }
                     }
@@ -85,7 +92,6 @@ new CronJob('0 0 7 * * *', function () {
             }
         });
     })
-
-}, null, true, 'Europe/Paris');
+}
 
 bot.login(process.env.TOKEN);
