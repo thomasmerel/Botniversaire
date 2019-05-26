@@ -20,7 +20,6 @@ module.exports = class Delete extends Command {
             if (exists) {
                 fs.readFile(file, function readFileCallback(err, data) {
                     if (err) {
-                        console.log(err);
                     } else {
                         obj = JSON.parse(data);
 
@@ -32,12 +31,12 @@ module.exports = class Delete extends Command {
                             fs.writeFileSync(file, json);
 
                             message.reply("Ton anniversaire a bien été supprimé :sob:")
-                                .then(sent => console.log(`Sent a reply to `+bPerson.username))
-                                .catch(console.error);
+                                .then()
+                                .catch();
                         } else {
                             message.reply("Tu n'existe pas, comment pourrais-tu être supprimé ?! :thinking:")
-                                .then(sent => console.log(`Sent a reply to `+bPerson.username))
-                                .catch(console.error);
+                                .then()
+                                .catch();
                         }
                     }
                 });

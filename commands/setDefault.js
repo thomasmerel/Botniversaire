@@ -30,7 +30,6 @@ module.exports = class Add extends Command {
             if (exists) {
                 fs.readFile(file, function readFileCallback(err, data) {
                     if (err) {
-                        console.log(err);
                     } else {
                         obj = JSON.parse(data);
 

@@ -29,7 +29,6 @@ module.exports = class List extends Command {
             if (exists) {
                 fs.readFile(file, function readFileCallback(err, data) {
                     if (err) {
-                        console.log(err);
                     } else {
                         obj = JSON.parse(data);
 
@@ -40,7 +39,6 @@ module.exports = class List extends Command {
                             let bdate = new Date(obj.bdays[key]);
                             let guild = message.guild;
                             let user = guild.members.find(val => val.id === key);
-                            console.log(user.tag);
 
                             let month = [
                                 "Janvier", "Fevrier", "Mars", "Avril", "Mai", "Juin", "Juillet",

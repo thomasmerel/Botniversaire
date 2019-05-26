@@ -16,7 +16,7 @@ const Sources = require('./commands/sources');
 let prefix = process.env.PREFIX;
 
 bot.on('ready', function () {
-    bot.user.setActivity('--help').catch(console.error)
+    bot.user.setActivity('--help').catch();
     wish();
 });
 
@@ -55,7 +55,6 @@ function wish(){
             if (exists) {
                 fs.readFile(file, function readFileCallback(err, data) {
                     if (err) {
-                        console.log(err);
                     } else {
                         let obj = JSON.parse(data);
 
@@ -77,14 +76,13 @@ function wish(){
                                 let defaultChan = guild.channels.find(val => val.id === obj.default['channel']);
                                 let user = guild.members.find(val => val.id === key);
 
-                                console.log(new Date());
-                                console.log(user.username);
-
-                                // defaultChan.send(
-                                //     ":tada: :gift: Joyeux anniversaire à " +user + " ! C'est ses " + age +
-                                //     " ans aujourd'hui ! :gift: :tada:",
-                                //     {files: ["https://media.giphy.com/media/3oKIPidnxHJQ3SuwwM/giphy.gif"]}
-                                //     );
+                                if(defaultChan !== null){
+                                    defaultChan.send(
+                                        ":tada: :gift: Joyeux anniversaire à " +user + " ! C'est ses " + age +
+                                        " ans aujourd'hui ! :gift: :tada:",
+                                        {files: ["https://media.giphy.com/media/3oKIPidnxHJQ3SuwwM/giphy.gif"]}
+                                    );
+                                }
                             }
                         }
                     }

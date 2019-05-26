@@ -2,6 +2,7 @@
 
 Install the bot :
 ```sh
+$ git clone git@github.com:thomasmerel/Botniversaire.git
 $ npm install
 ```
 
@@ -11,6 +12,7 @@ $ node index.js
 ```
 
 Dependencies :
+- [NodeJS](https://nodejs.org/en/)
 - [Discord.js](https://www.npmjs.com/package/discord)
 - [Cron](https://www.npmjs.com/package/cron)
 - [Dotenv](https://www.npmjs.com/package/dotenv)
