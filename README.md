@@ -16,6 +16,7 @@ Dependencies :
 - [Discord.js](https://www.npmjs.com/package/discord)
 - [Cron](https://www.npmjs.com/package/cron)
 - [Dotenv](https://www.npmjs.com/package/dotenv)
+- [Moment](https://www.npmjs.com/package/moment)
 
 # Commands
 | Command | Action |

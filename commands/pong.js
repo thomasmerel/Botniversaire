@@ -6,7 +6,7 @@ module.exports = class Ping extends Command {
     }
 
     static action(message) {
-        
+
         // Secret command.
 
         message.channel.send('Non.',

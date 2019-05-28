@@ -3,6 +3,8 @@ require('dotenv').config({path: `.env`});
 const Discord = require('discord.js');
 const CronJob = require('cron').CronJob;
 const fs = require('fs');
+const moment = require('moment');
+
 const bot = new Discord.Client();
 
 const Ping = require('./commands/ping');
@@ -45,7 +47,7 @@ new CronJob('0 0 7 * * *', function () {
     wish();
 }, null, true, 'Europe/Paris');
 
-function wish(){
+function wish() {
     let allguild = bot.guilds.array();
 
     allguild.forEach(function (guild) {
@@ -60,27 +62,25 @@ function wish(){
                     } else {
                         let obj = JSON.parse(data);
 
-                        let today = new Date();
-                        today.setHours(0, 0, 0, 0);
-                        let todayYear = today.getFullYear();
-                        today.setYear(0);
+                        let today = moment();
+                        let todayYear = today.year();
+                        today.year(1970);
 
                         for (let key in obj.bdays) {
 
-                            let bdate = new Date(obj.bdays[key]);
-                            bdate.setHours(0, 0, 0, 0);
-                            let bdateYear = bdate.getFullYear();
-                            bdate.setYear(0);
+                            let bdate = moment(obj.bdays[key]);
+                            let bdateYear = bdate.year();
+                            bdate.year(1970);
 
-                            if (today.valueOf() === bdate.valueOf()) {
+                            if (today.isSame(bdate, 'd')) {
                                 let age = todayYear - bdateYear;
 
                                 let defaultChan = guild.channels.find(val => val.id === obj.default['channel']);
                                 let user = guild.members.find(val => val.id === key);
 
-                                if(defaultChan !== null){
+                                if (defaultChan !== null) {
                                     defaultChan.send(
-                                        ":tada: :gift: Joyeux anniversaire à " +user + " ! C'est ses " + age +
+                                        ":tada: :gift: Joyeux anniversaire à " + user + " ! C'est ses " + age +
                                         " ans aujourd'hui ! :gift: :tada:",
                                         {files: ["https://media.giphy.com/media/3oKIPidnxHJQ3SuwwM/giphy.gif"]}
                                     );
