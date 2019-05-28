@@ -28,6 +28,10 @@ bot.on('message', function (message) {
         return false;
     }
 
+    if(message.channel.type === 'dm' || message.channel.type === 'group'){
+        return false;
+    }
+
     if (message.content.lastIndexOf(prefix, 0) === 0) {
         let commandUsed =
             Ping.parse(message) ||
