@@ -56,4 +56,4 @@ This project is on Beer-Ware licence :
 
 # Links
 
-[Twitter](https://twitter.com/Vulture___) | [Website](https://thomas-merel.fr) | [Github](https://github.com/thomasmerel)
+[Twitter](https://twitter.com/Vulture___) | [Website](https://thomas-merel.fr) | [Github](https://github.com/thomasmerel) | [Vulture#9999](https://discordapp.com/)
