@@ -52,7 +52,7 @@ function wish() {
 
     allguild.forEach(function (guild) {
 
-        let path = './anniversaries';
+        let path = process.env.SERVER_PATH;
         let file = path + '/' + guild.id + '.json';
 
         fs.exists(file, function (exists) {

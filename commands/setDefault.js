@@ -19,7 +19,7 @@ module.exports = class Add extends Command {
 
         let server = message.guild;
 
-        let path = './anniversaries';
+        let path = process.env.SERVER_PATH;
         let file = path + '/' + server.id + '.json';
 
         let fs = require('fs');

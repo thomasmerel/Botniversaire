@@ -11,6 +11,13 @@ Launch the bot :
 $ node index.js
 ```
 
+
+ENV settings :
+- `TOKEN` : Discord bot token.
+- `PREFIX` : Command prefix.
+- `SERVER_PATH` : Path where the .json files are located.
+- `DATE_FORMAT` : Date format the users have to respect. It's like the law but way cooler.
+
 Dependencies :
 - [NodeJS](https://nodejs.org/en/)
 - [Discord.js](https://www.npmjs.com/package/discord)
@@ -22,7 +29,7 @@ Dependencies :
 | Command | Action |
 | ------ | ------ |
 | --help | Show help |
-| --add [AAAA-MM-JJ] | Add birthday |
+| --add [DATE_FORMAT] | Add birthday |
 | --delete | Delete user's birthday |
 | --setDefault | Set default channel where birthday are wished (Admin only) |
 | --source | Give bot's Github |

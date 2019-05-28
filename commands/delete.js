@@ -9,7 +9,7 @@ module.exports = class Delete extends Command {
         let bPerson = message.author;
         let server = message.guild;
 
-        let path = './anniversaries';
+        let path = process.env.SERVER_PATH;
         let file = path + '/' + server.id + '.json';
 
         let fs = require('fs');

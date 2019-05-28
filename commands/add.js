@@ -12,12 +12,12 @@ module.exports = class Add extends Command {
 
         let args = message.content.split(' ');
 
-        let dateFormat = "YYYY-MM-DD";
+        let dateFormat = process.env.DATE_FORMAT;
 
-        if(moment(args[1], dateFormat, true).isValid()){
-            let bDate = moment(args[1]);
+        if (moment(args[1], dateFormat, true).isValid()) {
+            let bDate = moment(args[1], dateFormat);
 
-            let path = './anniversaries';
+            let path = process.env.SERVER_PATH;
             let file = path + '/' + server.id + '.json';
 
             let fs = require('fs');
@@ -71,7 +71,7 @@ module.exports = class Add extends Command {
             });
         } else {
             message.reply("Pourquoi tu me donnes une date non-valide... Tu ne sais plus écrire une date ? :face_palm:" +
-                '\n' + "Pour rappel, le format c'est : `AAAA-MM-JJ`")
+                '\n' + "Pour rappel, le format c'est : `" + dateFormat + "`")
                 .then()
                 .catch();
             return false;
