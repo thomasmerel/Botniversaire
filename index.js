@@ -6,10 +6,11 @@ const fs = require('fs');
 const bot = new Discord.Client();
 
 const Ping = require('./commands/ping');
+const Pong = require('./commands/pong');
 const Help = require('./commands/help');
 const Add = require('./commands/add');
 const Delete = require('./commands/delete');
-// const List = require('./commands/list');
+const List = require('./commands/list');
 const Default = require('./commands/setDefault');
 const Sources = require('./commands/sources');
 
@@ -28,9 +29,10 @@ bot.on('message', function (message) {
     if (message.content.lastIndexOf(prefix, 0) === 0) {
         let commandUsed =
             Ping.parse(message) ||
+            Pong.parse(message) ||
             Add.parse(message) ||
             Delete.parse(message) ||
-            // List.parse(message) ||
+            List.parse(message) ||
             Default.parse(message) ||
             Sources.parse(message) ||
             Help.parse(message);

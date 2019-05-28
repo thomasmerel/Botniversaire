@@ -34,7 +34,7 @@ module.exports = class Delete extends Command {
                                 .then()
                                 .catch();
                         } else {
-                            message.reply("Tu n'existe pas, comment pourrais-tu être supprimé ?! :thinking:")
+                            message.reply("Tu n'existes pas, comment pourrais-tu être supprimé ?! :thinking:")
                                 .then()
                                 .catch();
                         }

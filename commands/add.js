@@ -40,11 +40,11 @@ module.exports = class Add extends Command {
 
                         if (obj.hasOwnProperty("bdays")) {
                             if (obj.bdays.hasOwnProperty(bPerson.id)) {
-                                message.reply("ton anniversaire a bien été mis a jour")
+                                message.reply("ton anniversaire a bien été mis a jour.")
                                     .then()
                                     .catch();
                             } else {
-                                message.reply("ton anniversaire a bien été ajouté")
+                                message.reply("ton anniversaire a bien été ajouté.")
                                     .then()
                                     .catch();
                             }
@@ -52,7 +52,7 @@ module.exports = class Add extends Command {
                         } else {
                             obj.bdays = new Object();
 
-                            message.reply("ton anniversaire a bien été ajouté (félicitation tu es le premier. :clap:)")
+                            message.reply("ton anniversaire a bien été ajouté (félicitation tu es le premier. :clap:).")
                                 .then()
                                 .catch();
                         }
@@ -71,7 +71,7 @@ module.exports = class Add extends Command {
                 let json = JSON.stringify(obj);
                 fs.writeFileSync(file, json);
 
-                message.reply("ton anniversaire a bien été ajouté (félicitation tu es le premier. :clap:)")
+                message.reply("ton anniversaire a bien été ajouté (félicitation tu es le premier. :clap:).")
                     .then()
                     .catch();
             }

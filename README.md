@@ -22,7 +22,6 @@ Dependencies :
 | ------ | ------ |
 | --help | Show help |
 | --add [AAAA-MM-JJ] | Add birthday |
-| --list | Show server's birthday list (Admin only) - Not finished|
 | --delete | Delete user's birthday |
 | --setDefault | Set default channel where birthday are wished (Admin only) |
 | --source | Give bot's Github |
@@ -30,7 +29,6 @@ Dependencies :
 
 # ToDo
 
-- "list" command : Show server's birthday list.
 - Log file : Record all the actions done by the bot.
 
 # Invite this bot to your server

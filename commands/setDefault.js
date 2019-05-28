@@ -42,7 +42,7 @@ module.exports = class Add extends Command {
                         let json = JSON.stringify(obj);
                         fs.writeFileSync(file, json);
 
-                        message.channel.send('Le channel par default a bien été mis a jours. :clap:');
+                        message.channel.send('Le channel par défaut a bien été mis a jour. :clap:');
                     }
                 });
             } else {
@@ -53,7 +53,7 @@ module.exports = class Add extends Command {
                 let json = JSON.stringify(obj);
                 fs.writeFileSync(file, json);
 
-                message.channel.send('Le channel par default a bien été mis a jours. :clap:');
+                message.channel.send('Le channel par défaut a bien été mis a jour. :clap:');
             }
         });
     }

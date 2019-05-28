@@ -11,7 +11,6 @@ module.exports = class Help extends Command {
             '`--add [AAAA-MM-JJ]` => Ajouter son anniversaire' + '\n' +
             '`--delete` => Supprime la date lié a son pseudo' + '\n' +
             '`--sources` => Donne un lien vers les sources du bot' + '\n' +
-            // '`--list` => Affiche la liste des anniversaires (Admin only)' + '\n' +
             '`--setDefault` => Defini le channel où seront souhaité les anniversaires (Admin only)' + '\n' +
             '`--ping` => Pong.'
         );
