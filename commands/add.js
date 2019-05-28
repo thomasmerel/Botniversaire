@@ -12,7 +12,7 @@ module.exports = class Add extends Command {
 
         let args = message.content.split(' ');
 
-        var dateFormat = "YYYY-MM-DD";
+        let dateFormat = "YYYY-MM-DD";
 
         if(moment(args[1], dateFormat, true).isValid()){
             let bDate = moment(args[1]);
