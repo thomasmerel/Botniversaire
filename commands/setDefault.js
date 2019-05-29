@@ -22,6 +22,11 @@ module.exports = class Add extends Command {
         let path = process.env.SERVER_PATH;
         let file = path + '/' + server.id + '.json';
 
+        if (message.channel.nsfw) {
+            message.channel.send('Un channel NSFW ? Sérieusement ? :neutral_face:');
+            return false;
+        }
+
         let fs = require('fs');
 
         let obj = {};
