@@ -44,7 +44,7 @@ Dependencies :
 
 [Invite](https://discordapp.com/api/oauth2/authorize?client_id=579998659161227285&scope=bot&permissions=518145)
 
-# Licence
+# License
 
 This project is on Beer-Ware license :
 
