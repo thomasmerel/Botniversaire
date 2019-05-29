@@ -38,6 +38,7 @@ Dependencies :
 # ToDo
 
 - Log file : Record all the actions done by the bot.
+- Improve the bot, so he will become a real little boy.
 
 # Invite this bot to your server
 
@@ -45,7 +46,7 @@ Dependencies :
 
 # Licence
 
-This project is on Beer-Ware licence :
+This project is on Beer-Ware license :
 
 >  "THE BEER-WARE LICENSE" (Revision 42):
 >  <thomas.merel.44@gmail.com> wrote this project.  As long as you retain this

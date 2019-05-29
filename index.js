@@ -28,7 +28,7 @@ bot.on('message', function (message) {
         return false;
     }
 
-    if(message.channel.type === 'dm' || message.channel.type === 'group'){
+    if (message.channel.type === 'dm' || message.channel.type === 'group') {
         return false;
     }
 
@@ -72,6 +72,7 @@ function wish() {
 
                         for (let key in obj.bdays) {
 
+
                             let bdate = moment(obj.bdays[key]);
                             let bdateYear = bdate.year();
                             bdate.year(1970);
@@ -83,11 +84,29 @@ function wish() {
                                 let user = guild.members.find(val => val.id === key);
 
                                 if (defaultChan !== null) {
-                                    defaultChan.send(
-                                        ":tada: :gift: Joyeux anniversaire à " + user + " ! C'est ses " + age +
-                                        " ans aujourd'hui ! :gift: :tada:",
-                                        {files: ["https://media.giphy.com/media/3oKIPidnxHJQ3SuwwM/giphy.gif"]}
-                                    );
+
+                                    let random = Math.random() * (100 - 1) + 1;
+
+                                    if (random < 33) {
+                                        defaultChan.send(
+                                            "Hey " + user + " ! C'est pas ton anniversaire aujourd'hui ? Bon " +
+                                            "anniversaire ! ça te fais quoi ? " + age + " ans ? 'tain t'es une vielle" +
+                                            " personne maintenant !",
+                                            {files: ["https://media.giphy.com/media/3oEhn78T277GKAq6Gc/giphy.gif"]}
+                                        );
+                                    } else if (random > 66) {
+                                        defaultChan.send(
+                                            ":tada: :gift: Joyeux anniversaire à " + user + " ! C'est ses " + age +
+                                            " ans aujourd'hui ! :gift: :tada:",
+                                            {files: ["https://media.giphy.com/media/3oKIPidnxHJQ3SuwwM/giphy.gif"]}
+                                        );
+                                    } else {
+                                        defaultChan.send(
+                                            "WOW ! ARRETEZ TOUT ! C'EST L'ANNIVERSAIRE DE " + user + " ! JOYEUX DE " +
+                                            "PUTAIN DE " + age + " ANS !",
+                                            {files: ["https://media.giphy.com/media/yoJC2GnSClbPOkV0eA/giphy.gif"]}
+                                        );
+                                    }
                                 }
                             }
                         }
