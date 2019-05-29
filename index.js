@@ -19,7 +19,7 @@ const Sources = require('./commands/sources');
 let prefix = process.env.PREFIX;
 
 bot.on('ready', function () {
-    bot.user.setActivity('--help').catch();
+    bot.user.setActivity(prefix + 'help').catch();
     wish();
 });
 

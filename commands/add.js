@@ -17,6 +17,23 @@ module.exports = class Add extends Command {
         if (moment(args[1], dateFormat, true).isValid()) {
             let bDate = moment(args[1], dateFormat);
 
+            let potentialAge = moment().year() - bDate.year();
+            if (potentialAge < 13) {
+                message.reply("tu as " + potentialAge + " ans ? Qu'est-ce que tu branle là ? Rentre chez toi, " +
+                    "ta mère t'a fait des gaufres.",
+                    {files: ["https://media.giphy.com/media/ac7MA7r5IMYda/giphy.gif"]})
+                    .then()
+                    .catch();
+                return false;
+            } else if (potentialAge > 90) {
+                message.reply("Mmmh... :thinking: Tu as " + potentialAge + " ans ? T'es sûr de toi ? :older_man:" +
+                    ":older_woman: ",
+                    {files: ["https://media.giphy.com/media/BgBf6pW9qOgQU/giphy.gif"]})
+                    .then()
+                    .catch();
+                return false;
+            }
+
             let path = process.env.SERVER_PATH;
             let file = path + '/' + server.id + '.json';
 
@@ -70,7 +87,7 @@ module.exports = class Add extends Command {
                 }
             });
         } else {
-            message.reply("Pourquoi tu me donnes une date non-valide... Tu ne sais plus écrire une date ? :face_palm:" +
+            message.reply("C'est quoi cette date pourrie ? Tu ne connais plus ton anniversaire ? :face_palm:" +
                 '\n' + "Pour rappel, le format c'est : `" + dateFormat + "`")
                 .then()
                 .catch();
