@@ -16,6 +16,7 @@ module.exports = class Add extends Command {
 
         if (moment(args[1], dateFormat, true).isValid()) {
             let bDate = moment(args[1], dateFormat);
+            bDate.add(12, 'h');
 
             let potentialAge = moment().year() - bDate.year();
             if (potentialAge < 13) {
