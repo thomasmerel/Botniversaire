@@ -91,26 +91,26 @@ function wish() {
                                         defaultChan.send(
                                             "Hey " + user + " ! C'est pas ton anniversaire aujourd'hui ? Bon " +
                                             "anniversaire ! ça te fais quoi ? " + age + " ans ? 'tain t'es une vielle" +
-                                            " personne maintenant !",
-                                            {files: ["https://media.giphy.com/media/3oEhn78T277GKAq6Gc/giphy.gif"]}
+                                            " personne maintenant !\n" +
+                                            "https://media.giphy.com/media/3oEhn78T277GKAq6Gc/giphy.gif"
                                         );
                                     } else if (random > 25 && random < 50) {
                                         defaultChan.send(
                                             ":tada: :gift: Joyeux anniversaire à " + user + " ! C'est ses " + age +
-                                            " ans aujourd'hui ! :gift: :tada:",
-                                            {files: ["https://media.giphy.com/media/3oKIPidnxHJQ3SuwwM/giphy.gif"]}
+                                            " ans aujourd'hui ! :gift: :tada:\n" +
+                                            "https://media.giphy.com/media/3oKIPidnxHJQ3SuwwM/giphy.gif"
                                         );
                                     } else if (random > 50 && random < 75) {
                                         defaultChan.send(
                                             ":boom: Boom ! C'est l'anniversaire de " + user +
-                                            " ! AH ! Tu l'as pas vu venir ! Fêtes lui ses " + age + " ! :clap:",
-                                            {files: ["https://media.giphy.com/media/kwSZzHYRwd4Lm/giphy.gif"]}
+                                            " ! AH ! Tu l'as pas vu venir ! Fêtes lui ses " + age + " ! :clap:\n" +
+                                            "https://media.giphy.com/media/kwSZzHYRwd4Lm/giphy.gif"
                                         );
                                     } else {
                                         defaultChan.send(
                                             "WOW ! ARRETEZ TOUT ! C'EST L'ANNIVERSAIRE DE " + user + " ! JOYEUX DE " +
-                                            "PUTAIN DE " + age + " ANS !",
-                                            {files: ["https://media.giphy.com/media/yoJC2GnSClbPOkV0eA/giphy.gif"]}
+                                            "PUTAIN DE " + age + " ANS !\n" +
+                                            "https://media.giphy.com/media/yoJC2GnSClbPOkV0eA/giphy.gif"
                                         );
                                     }
                                 }

@@ -21,15 +21,15 @@ module.exports = class Add extends Command {
             let potentialAge = moment().year() - bDate.year();
             if (potentialAge < 13) {
                 message.reply("tu as " + potentialAge + " ans ? Qu'est-ce que tu branle là ? Rentre chez toi, " +
-                    "ta mère t'a fait des gaufres.",
-                    {files: ["https://media.giphy.com/media/ac7MA7r5IMYda/giphy.gif"]})
+                    "ta mère t'a fait des gaufres. \n" +
+                    "https://media.giphy.com/media/ac7MA7r5IMYda/giphy.gif")
                     .then()
                     .catch();
                 return false;
             } else if (potentialAge > 90) {
                 message.reply("Mmmh... :thinking: Tu as " + potentialAge + " ans ? T'es sûr de toi ? :older_man:" +
-                    ":older_woman: ",
-                    {files: ["https://media.giphy.com/media/BgBf6pW9qOgQU/giphy.gif"]})
+                    ":older_woman: \n" +
+                    "ttps://media.giphy.com/media/BgBf6pW9qOgQU/giphy.gif")
                     .then()
                     .catch();
                 return false;

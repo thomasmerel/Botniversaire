@@ -12,8 +12,8 @@ module.exports = class Add extends Command {
         let indAdm = perm.indexOf("ADMINISTRATOR");
 
         if (indAdm === -1) {
-            message.channel.send('Hey dit donc ' + author + ' ! Tu te crois tout permis ?!! :rage:',
-                {files: ["https://media.giphy.com/media/jEDdKUXNgVQhW/giphy.gif"]});
+            message.channel.send('Hey dit donc ' + author + ' ! Tu te crois tout permis ?!! :rage:\n' +
+                'https://media.giphy.com/media/jEDdKUXNgVQhW/giphy.gif');
             return false;
         }
 
