@@ -87,18 +87,24 @@ function wish() {
 
                                     let random = Math.random() * (100 - 1) + 1;
 
-                                    if (random < 33) {
+                                    if (random < 25) {
                                         defaultChan.send(
                                             "Hey " + user + " ! C'est pas ton anniversaire aujourd'hui ? Bon " +
                                             "anniversaire ! ça te fais quoi ? " + age + " ans ? 'tain t'es une vielle" +
                                             " personne maintenant !",
                                             {files: ["https://media.giphy.com/media/3oEhn78T277GKAq6Gc/giphy.gif"]}
                                         );
-                                    } else if (random > 66) {
+                                    } else if (random > 25 && random < 50) {
                                         defaultChan.send(
                                             ":tada: :gift: Joyeux anniversaire à " + user + " ! C'est ses " + age +
                                             " ans aujourd'hui ! :gift: :tada:",
                                             {files: ["https://media.giphy.com/media/3oKIPidnxHJQ3SuwwM/giphy.gif"]}
+                                        );
+                                    } else if (random > 50 && random < 75) {
+                                        defaultChan.send(
+                                            ":boom: Boom ! C'est l'anniversaire de " + user +
+                                            " ! AH ! Tu l'as pas vu venir ! Fêtes lui ses " + age + " ! :clap:",
+                                            {files: ["https://media.giphy.com/media/kwSZzHYRwd4Lm/giphy.gif"]}
                                         );
                                     } else {
                                         defaultChan.send(
