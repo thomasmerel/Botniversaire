@@ -42,7 +42,8 @@ Dependencies :
 
 # Invite this bot to your server
 
-[Invite](https://discordapp.com/api/oauth2/authorize?client_id=579998659161227285&scope=bot&permissions=518145)
+~~Invite~~
+This bot is not maintained anymore, but if you want a bot that do the same and more (and updated), please go check this one : [This bot](https://github.com/thomasmerel/ScordBot)
 
 # License
 
