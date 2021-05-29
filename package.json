@@ -9,9 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cron": "^1.7.1",
-    "discord.js": "^11.5.0",
-    "dotenv": "^8.0.0",
-    "moment": "^2.24.0"
+    "cron": "^1.8.2",
+    "discord.js": "^11.6.4",
+    "dotenv": "^8.6.0",
+    "moment": "^2.29.1"
   }
 }
